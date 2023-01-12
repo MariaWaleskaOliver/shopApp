@@ -1,0 +1,59 @@
+body{
+    box-sizing: border-box;
+    margin:10px;
+    padding: 10px;
+
+}
+.container{
+   width:100%; 
+}
+.hr4  {
+margin-top: 65px;
+border: 0; 
+  border-bottom: 2px solid rgb(3, 71, 10);
+  height: 3px;
+  }
+
+#form{
+    margin-top: 20px;
+}
+.pageCamera{
+    padding: 20px;
+}
+#map{
+    padding: 5px;
+    height: 30vh;
+    width:45ch;
+    margin: auto;
+    margin-top: 10px;
+}
+header h1 {
+    float: left ;
+}
+header button{
+    float: right;
+    text-decoration: none;
+}
+h4{
+    color: green;
+}
+#btnAdd{
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  height: 40px;
+  width: 300px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+  background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
+  
+  .validation-error{
+    color:red;
+    text-align: center;
+  }

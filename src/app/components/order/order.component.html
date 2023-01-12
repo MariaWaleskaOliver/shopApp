@@ -1,0 +1,29 @@
+<body>
+    <div class="container">
+    <h1 class="display-1">Order List</h1>
+    </div>
+    <div>
+      <hr class="hr4">
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+
+        <thead>
+        <tr>
+          <th class="th-lg">Date</th>
+          <th class="th-lg">Items</th>
+          <th class="th-lg">Price</th>
+          <th class="th-lg"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let order of orders">
+          <td class="align-middle">{{order.orderDateTime.toLocaleDateString()}}</td>
+          <td class="align-middle">{{order.description}}</td>
+          <td class="align-middle">{{order.total}}</td>
+          <td><button type="button" id="btnDetail" class="btn" (click)="btnDetail_Click(order.orderId)">Detail</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</body>

@@ -1,0 +1,115 @@
+<body>
+  <header>
+   <div class="container">
+    <h1 class="display-1">Settings</h1>
+    <button type="button" id="gobacklink" class="btn btn-link"><a class="nav-link" routerLink="/home"> Go to Home</a></button>
+   </div>
+  </header>
+  <div>
+    <hr class="hr4">
+  </div>
+<!--Form--->
+<form #userForm="ngForm">
+  <div class="diveInitial">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="name" class="form-label">Change your Name</label>
+        <input type="text" id="name" name="name"
+               class="form-control is-isvalid" placeholder="Name"
+               required minlength="4"
+               [(ngModel)]="setting.name"
+               #name="ngModel" ngModel>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" >
+          <p *ngIf="name.errors?.['required']" [ngClass]="'text-danger'" >
+            User name is required.
+          </p>
+          <small *ngIf="name.errors?.['minlength']" [ngClass]="'text-danger'">
+            User name must be at least 4 characters long.
+          </small>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="txtUserEmail">Change your Email</label>
+        <input type="text" id="txtUserEmail" name="txtUserEmail" 
+        class="form-control is-valid"  placeholder="Email" 
+         required Regex="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+         [(ngModel)]="setting.email"
+         #userEmail="ngModel" ngModel >
+         <div *ngIf="userEmail.invalid && (userEmail.dirty || userEmail.touched)" >
+          <p *ngIf="userEmail.errors?.['required']" [ngClass]="'text-danger'" >
+            User email is required.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">Phone Number</label>
+        <input type="text" id="txtPhoneNumber" name="txtPhoneNumber"  
+        class="form-control is-valid"  placeholder="Phone Number"  
+        required
+        [(ngModel)]="setting.phoneNo"
+        #userNumber="ngModel" ngModel >
+        <div *ngIf="userNumber.invalid && (userNumber.dirty || userNumber.touched)" >
+          <p *ngIf="userNumber.errors?.['required']" [ngClass]="'text-danger'" >
+            User number is required.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="validationServerUsername">Change your Username</label>
+        
+          <input type="text" class="form-control is-invalid" id="txtChangeUserName" name="txtChangeUserName" 
+          placeholder="Username" aria-describedby="inputGroupPrepend3" r
+          required minlength="4"
+          [(ngModel)]="setting.userName"
+          #userName="ngModel" ngModel>
+          <div>
+         <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" >
+         <div>
+          <small *ngIf="userName.errors?.['minlength']" [ngClass]="'text-danger'">
+             UserName must be at least 4 characters long.
+          </small>
+        
+     
+        <small *ngIf="userName.errors?.['required']" [ngClass]="'text-danger'" >
+          Username is required.
+        </small>
+      </div>
+          
+      </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="!userForm.valid" [ngClass]="'validation-error'">
+    --------------- Please fill all the fields --------------
+  </p>
+ <h4> Confirm your location</h4>
+ <button type="button" class="btn btn-outline-success" (click)="onclick()">
+  {{ReadMore?"I would like to add more details of my address":"All Done"}}
+</button>
+<ng-container *ngIf="visible">
+  <!--this all class belong to bootstrap 4-->
+  
+  
+  <div class="form-group">
+    <label for="comment">Address Details</label>
+    <textarea class="form-control" rows="5" id="comment" 
+    name="comment" 
+    [(ngModel)]="setting.aditionalInfo" #comment="ngModel" ngModel ></textarea>
+  </div>
+</ng-container>
+ <div id="map">
+ </div>
+ <div id="button">
+  <button id="btnAdd" name="btnAdd"(click)="btnAdd_click()" [disabled]="!userForm.valid">Submit</button><!--[disabled]="!userForm.valid"-->
+</div>
+</form>
+</body>
+<footer class="bg-light text-center">
+  <div class="text-center p-3" style="background-color: whitesmoke">
+    © 2022 Mobile Application
+  </div>
+  <!-- Copyright -->
+</footer>

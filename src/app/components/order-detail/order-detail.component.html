@@ -1,0 +1,26 @@
+<body>
+  <div class="card-title">
+    <h1 class="display-2">Order Details</h1>
+  </div>
+  <div>
+    <hr class="hr4">
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="th-lg text-center col-4">Image</th>
+      <th class="th-lg text-center col-4">Name</th>
+      <th class="th-lg text-center col-2">Price</th>
+      <th class="th-lg text-center col-2">Qty</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of orderDetails">
+      <td class="text-center align-middle"><img src="{{item.imageSrc}}" class="img-fluid img-responsive objFit" alt="..."></td>
+      <td class="text-center align-middle">{{item.name}}</td>
+      <td class="text-center align-middle">{{item.price}}</td>
+      <td class="text-center align-middle">{{item.quantity}}</td>
+    </tr>
+    </tbody>
+  </table>
+</body>

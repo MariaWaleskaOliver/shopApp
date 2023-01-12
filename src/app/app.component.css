@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #556B2F;
+
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+#navbarUl li{
+    display: inline;
+    padding: 0px 10px;
+    list-style: none;
+}
+#navbarUl li a{
+    transition:  all 0.3s ease 0s;
+    color: white;
+}
+#navbarUl li a:hover{
+    color: #D5CE58;
+}

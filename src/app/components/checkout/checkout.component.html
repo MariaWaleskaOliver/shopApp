@@ -1,0 +1,26 @@
+<div class="m-4">
+    <div class="card">
+      <div class="card-header">
+        <h2>Checkout</h2>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of items">
+            <div class="row">
+              <div class="col-sm-4">
+                {{item.name}}
+
+              </div>
+              <div class="col-sm-4">
+                <button type="button" id="btnDelete" name="btnDelete"
+                        class="btn btn-danger btn-sm me-4" (click)="btnDelete_click(item)"
+                >Delete</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button type="button" id="btnConfirm" name="btnConfirm"
+              class="btn btn-primary btn-sm me-4" (click)="btnConfirm_click()">Save Order</button>
+    </div>
+  </div>

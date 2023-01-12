@@ -1,0 +1,57 @@
+<!--<img [src]="myimage" alt="img1" class= "img1">-->
+
+<div>
+<!--  <div class="card cardCStyle">-->
+<!--    <img [src]="myimage" class="card-img-top cardImage" alt="...">-->
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title">item 1</h5>-->
+<!--      <p class="card-text">this is item 1</p>-->
+<!--      <a href="#" class="btn btn-primary">add to cart</a>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+   <div class="cardContainer" *ngFor="let item of items">
+
+
+
+<!--        <img class="card-img-top cardImage" src="{{item.imageSrc}}">-->
+<!--        <div class="card-body">-->
+<!--          <div class="card-title">{{item.name}} $ {{item.price}}</div>-->
+<!--          <div class="card-text oneLine">{{item.description}}</div>-->
+<!--          <button class="btn btn-primary" [id]="item.itemId" (click)="btnAddCart_Click($event)">Add to Cart</button>-->
+<!--        </div>-->
+     <div class="card " >
+       <div class="row g-0">
+         <div class="col-4 cardImage " >
+           <img src="{{item.imageSrc}}" class="img-fluid rounded-start objFit" alt="...">
+         </div>
+         <div class="col-8 ">
+           <div class="card-body">
+             <h5 class="card-title">{{item.name}} $ {{item.price}}</h5>
+             <p class="card-text oneLine">{{item.description}}</p>
+             <button class="btn btn-primary" [id]="item.itemId" (click)="btnAddCart_Click($event)">Add to Cart</button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+
+   </div>
+
+
+
+
+
+  <div class="fab fixed-bottom" routerLink="/checkout">
+    <p ><span class="badge text-bg-secondary">{{cartCount}}</span></p>
+    <p class="fabItem">Cart</p>
+
+  </div>
+
+
+  <div id="snackbar">Item added to the cart</div>
+
+</div>
+

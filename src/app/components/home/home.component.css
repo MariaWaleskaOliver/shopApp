@@ -1,0 +1,102 @@
+.img1{
+    width: 50%;
+}
+.cardCStyle{
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 1vh;
+}
+
+.cardImage{
+
+  display: flex;
+  justify-content: center;
+
+
+
+}
+.objFit{
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.width60{
+  max-width: 60vw;
+  width: 60vw;
+}
+.oneLine{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inherit;
+}
+.fab{
+  width: 80px;
+  height: 80px;
+  border-radius: 50% ;
+  background-color: #12CBC4;
+  z-index: 3;
+  position: fixed;
+  left: 75vw;
+  top: 80vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+
+
+}
+.fabItem{
+  margin-top: -10px;
+  font-family: "Century Gothic";
+  font-weight: bold;
+  color: white;
+}
+.card{
+  padding: 2vw;
+}
+.card-text{
+  font-size: 12px;
+}
+
+
+
+#snackbar{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  bottom: 3vh;
+  padding: 3vw;
+}
+
+#snackbar.show{
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s ;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
